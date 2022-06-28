@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Activator
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Plate
+    uniqueID: 17843389
+    locked: 0
+  - name: Notes
+    uniqueID: 2570633607
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
