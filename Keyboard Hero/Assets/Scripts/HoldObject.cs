@@ -20,6 +20,7 @@ public class HoldObject : MonoBehaviour
         if (Input.GetKey(keyToHold) && !note.activeSelf) {
             if (canBePressed) {
                 gameObject.SetActive(false);
+                //Score.scoreObject.addScore();
             }
         }
     }

@@ -11,10 +11,19 @@ public class ButtonController : MonoBehaviour
 
     public KeyCode keyToPress;
 
+    public KeyCode click1;
+
+    public KeyCode click2;
+
+    public bool isInside = false;
+
+    public static ButtonController buttonControllerObject;
+
     // Start is called before the first frame update
     void Start()
     {
         theSR = GetComponent<SpriteRenderer>();
+        buttonControllerObject = this;
     }
 
     // Update is called once per frame
@@ -26,6 +35,14 @@ public class ButtonController : MonoBehaviour
 
         if (Input.GetKeyUp(keyToPress)) {
             theSR.sprite = defaultImage;
+        }
+
+        if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2))
+        {
+            if (!isInside)
+            {
+                Score.scoreObject.combo = 0;
+            }
         }
     }
 }

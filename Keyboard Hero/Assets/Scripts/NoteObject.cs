@@ -21,9 +21,11 @@ public class NoteObject : MonoBehaviour
         if (Input.GetKey(keyToHold)) {
             if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2)) {
                 if (canBePressed) {
+                    ButtonController.buttonControllerObject.isInside = true;
                     gameObject.SetActive(false);
+                    Score.scoreObject.combo += 1;
+                    Score.scoreObject.addScore();
                 } else {
-                    
                 }
             }         
         }
