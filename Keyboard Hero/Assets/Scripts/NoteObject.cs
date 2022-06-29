@@ -9,10 +9,6 @@ public class NoteObject : MonoBehaviour
     public KeyCode click1;
     public KeyCode click2;
 
-    public KeyCode keyNotToHold1;
-    public KeyCode keyNotToHold2;
-    public KeyCode keyNotToHold3;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,14 +19,11 @@ public class NoteObject : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(keyToHold)) {
-            if (Input.GetKey(click1) || Input.GetKey(click2)) {
-                if (Input.GetKey(keyNotToHold1) || Input.GetKey(keyNotToHold2) || Input.GetKey(keyNotToHold3)) {
-
+            if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2)) {
+                if (canBePressed) {
+                    gameObject.SetActive(false);
                 } else {
-                    if (canBePressed) {
-                        gameObject.SetActive(false);
                     
-                    }
                 }
             }         
         }
