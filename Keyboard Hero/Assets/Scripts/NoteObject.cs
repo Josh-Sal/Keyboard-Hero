@@ -18,17 +18,17 @@ public class NoteObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(keyToHold)) {
-            if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2)) {
-                if (canBePressed) {
-                    ButtonController.buttonControllerObject.isInside = true;
-                    gameObject.SetActive(false);
-                    Score.scoreObject.combo += 1;
-                    Score.scoreObject.addScore();
-                } else {
-                }
-            }         
-        }
+        // if (Input.GetKey(keyToHold)) {
+        //     if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2)) {
+        //         if (canBePressed) {
+        //             ButtonController.buttonControllerObject.isInside = true;
+        //             gameObject.SetActive(false);
+        //             Score.scoreObject.combo += 1;
+        //             Score.scoreObject.addScore();
+        //         } else {
+        //         }
+        //     }         
+        // }
     }
 
     void OnTriggerEnter2D(Collider2D other) {

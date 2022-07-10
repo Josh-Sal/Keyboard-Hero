@@ -20,19 +20,19 @@ public class HoldObject : MonoBehaviour
         if (Input.GetKey(keyToHold) && !note.activeSelf) {
             if (canBePressed) {
                 gameObject.SetActive(false);
-                //Score.scoreObject.addScore();
+                Score.scoreObject.addScore();
             }
         }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Activator") {
+        if (other.tag == "Miss") {
             canBePressed = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        if (other.tag == "Activator") {
+        if (other.tag == "Miss") {
             canBePressed = false;
         }
     }

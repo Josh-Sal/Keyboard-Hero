@@ -33,7 +33,7 @@ public class Score : MonoBehaviour
 
     public void addScore() 
     {
-        score += combo * 300;
+        score += combo * 100;
     }
 
 }
