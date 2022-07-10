@@ -36,13 +36,5 @@ public class ButtonController : MonoBehaviour
         if (Input.GetKeyUp(keyToPress)) {
             theSR.sprite = defaultImage;
         }
-
-        if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2))
-        {
-            if (!isInside)
-            {
-                Score.scoreObject.combo = 0;
-            }
-        }
     }
 }
