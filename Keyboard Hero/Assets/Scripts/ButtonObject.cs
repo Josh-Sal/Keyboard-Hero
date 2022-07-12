@@ -16,6 +16,7 @@ public class ButtonObject : MonoBehaviour
     public AudioSource hitSound;
     public AudioSource comboBreak;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,8 @@ public class ButtonObject : MonoBehaviour
         if (other.tag == "Hold" || other.tag == "Last Hold") {
             isHolding = true;
         }
+
+        Score.scoreObject.scoreMultiplier = 100;
     }
 
     void OnTriggerExit2D(Collider2D other) {

@@ -9,6 +9,7 @@ TagManager:
   - Miss
   - Hold
   - Last Hold
+  - Good
   layers:
   - Default
   - TransparentFX

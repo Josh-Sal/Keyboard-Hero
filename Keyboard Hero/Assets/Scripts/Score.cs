@@ -16,6 +16,8 @@ public class Score : MonoBehaviour
 
     public static Score scoreObject;
 
+    public int scoreMultiplier = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class Score : MonoBehaviour
 
     public void addScore() 
     {
-        score += combo * 100;
+        score += combo * scoreMultiplier;
     }
 
 }
