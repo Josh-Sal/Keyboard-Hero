@@ -11,6 +11,7 @@ public class BeatScroller : MonoBehaviour
     void Start()
     {
         beatTempo = beatTempo / 60f;
+        hasStarted = true;
     }
 
     // Update is called once per frame

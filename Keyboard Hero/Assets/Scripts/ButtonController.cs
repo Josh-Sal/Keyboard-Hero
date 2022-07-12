@@ -11,10 +11,19 @@ public class ButtonController : MonoBehaviour
 
     public KeyCode keyToPress;
 
+    public KeyCode click1;
+
+    public KeyCode click2;
+
+    public bool isInside = false;
+
+    public static ButtonController buttonControllerObject;
+
     // Start is called before the first frame update
     void Start()
     {
         theSR = GetComponent<SpriteRenderer>();
+        buttonControllerObject = this;
     }
 
     // Update is called once per frame
