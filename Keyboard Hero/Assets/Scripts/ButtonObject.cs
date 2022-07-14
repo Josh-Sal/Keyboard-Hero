@@ -15,6 +15,8 @@ public class ButtonObject : MonoBehaviour
     ParticleSystem.MainModule particleSettings;
     public AudioSource hitSound;
     public AudioSource comboBreak;
+    public GameObject endStats;
+    public GameObject hud;
 
 
     // Start is called before the first frame update
@@ -39,6 +41,7 @@ public class ButtonObject : MonoBehaviour
                 } else {
                     if (!isHolding) {
                         comboBreakAudio();
+                        Score.scoreObject.misses += 1;
                         Score.scoreObject.combo = 0;
                         particleSettings.startColor = new Color(0, 0, 0);
                         particle.Play();
@@ -59,6 +62,11 @@ public class ButtonObject : MonoBehaviour
         }
 
         Score.scoreObject.scoreMultiplier = 100;
+
+        if (other.tag == "End") {
+            endStats.SetActive(true);
+            hud.SetActive(false);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) {
@@ -67,6 +75,7 @@ public class ButtonObject : MonoBehaviour
 
             if (other.gameObject.activeSelf) {
                 comboBreakAudio();
+                Score.scoreObject.misses += 1;
                 Score.scoreObject.combo = 0;
             }
         }
