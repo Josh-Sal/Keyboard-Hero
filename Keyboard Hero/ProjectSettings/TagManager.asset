@@ -10,6 +10,8 @@ TagManager:
   - Hold
   - Last Hold
   - Good
+  - HUD
+  - End
   layers:
   - Default
   - TransparentFX

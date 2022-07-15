@@ -10,6 +10,8 @@ public class Score : MonoBehaviour
 
     public int combo = 0;
 
+    public int misses = 0;
+
     public TextMeshProUGUI scoreText;
 
     public TextMeshProUGUI comboText;
