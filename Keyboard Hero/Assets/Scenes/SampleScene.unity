@@ -17430,6 +17430,8 @@ MonoBehaviour:
   keyToHold: 115
   click1: 107
   click2: 108
+  mouseClick1: 323
+  mouseClick2: 324
   particleObject: {fileID: 25506053}
   hitSound: {fileID: 1092724115}
   comboBreak: {fileID: 911441002}
@@ -20061,6 +20063,8 @@ MonoBehaviour:
   keyToHold: 100
   click1: 107
   click2: 108
+  mouseClick1: 323
+  mouseClick2: 324
   particleObject: {fileID: 263602901}
   hitSound: {fileID: 1092724115}
   comboBreak: {fileID: 911441002}
@@ -43690,6 +43694,8 @@ MonoBehaviour:
   keyToHold: 97
   click1: 107
   click2: 108
+  mouseClick1: 323
+  mouseClick2: 324
   particleObject: {fileID: 2072744618}
   hitSound: {fileID: 1092724115}
   comboBreak: {fileID: 911441002}
@@ -52115,6 +52121,8 @@ MonoBehaviour:
   keyToHold: 102
   click1: 107
   click2: 108
+  mouseClick1: 323
+  mouseClick2: 324
   particleObject: {fileID: 1979074765}
   hitSound: {fileID: 1092724115}
   comboBreak: {fileID: 911441002}

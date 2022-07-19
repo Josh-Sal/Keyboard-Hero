@@ -9,6 +9,8 @@ public class ButtonObject : MonoBehaviour
     public KeyCode keyToHold;
     public KeyCode click1;
     public KeyCode click2;
+    public KeyCode mouseClick1;
+    public KeyCode mouseClick2;
     private GameObject note;
     public GameObject particleObject;
     private ParticleSystem particle;
@@ -30,7 +32,7 @@ public class ButtonObject : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(keyToHold)) {
-            if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2)) {
+            if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2) || Input.GetKeyDown(mouseClick1) || Input.GetKeyDown(mouseClick2)) {
                 ParticleColour();
                 if (canBePressed) {
                     note.SetActive(false);
