@@ -77,7 +77,6 @@ public class ButtonObject : MonoBehaviour
 
             if (other.gameObject.activeSelf) {
                 comboBreakAudio();
-                Score.scoreObject.misses += 1;
                 Score.scoreObject.combo = 0;
             }
         }

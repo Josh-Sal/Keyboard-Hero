@@ -12,6 +12,8 @@ public class Score : MonoBehaviour
 
     public int misses = 0;
 
+    public int highest = 0;
+
     public TextMeshProUGUI scoreText;
 
     public TextMeshProUGUI comboText;
@@ -33,6 +35,9 @@ public class Score : MonoBehaviour
     {
        scoreText.text = "Score: " + score;
        comboText.text = "Combo: " + combo;
+
+        HighestCombo(combo);
+        print(misses);
     }
 
     public void addScore() 
@@ -40,4 +45,9 @@ public class Score : MonoBehaviour
         score += combo * scoreMultiplier;
     }
 
+    void HighestCombo(int lastCombo) {
+        if (lastCombo > highest) {
+            highest = lastCombo;
+        }
+    }
 }
