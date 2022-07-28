@@ -19,6 +19,7 @@ public class ButtonObject : MonoBehaviour
     public AudioSource comboBreak;
     public GameObject endStats;
     public GameObject hud;
+    bool end = false;
 
 
     // Start is called before the first frame update
@@ -31,26 +32,29 @@ public class ButtonObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(keyToHold)) {
-            if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2) || Input.GetKeyDown(mouseClick1) || Input.GetKeyDown(mouseClick2)) {
-                ParticleColour();
-                if (canBePressed) {
-                    note.SetActive(false);
-                    Score.scoreObject.combo += 1;
-                    Score.scoreObject.addScore();
-                    hitSound.Play();
-                    particle.Play();
-                } else {
-                    if (!isHolding) {
-                        comboBreakAudio();
-                        Score.scoreObject.misses += 1;
-                        Score.scoreObject.combo = 0;
-                        particleSettings.startColor = new Color(0, 0, 0);
+        if (!end) {
+            if (Input.GetKey(keyToHold)) {
+                if (Input.GetKeyDown(click1) || Input.GetKeyDown(click2) || Input.GetKeyDown(mouseClick1) || Input.GetKeyDown(mouseClick2)) {
+                    ParticleColour();
+                    if (canBePressed) {
+                        note.SetActive(false);
+                        Score.scoreObject.combo += 1;
+                        Score.scoreObject.addScore();
+                        hitSound.Play();
                         particle.Play();
+                    } else {
+                        if (!isHolding) {
+                            comboBreakAudio();
+                            Score.scoreObject.misses += 1;
+                            Score.scoreObject.combo = 0;
+                            particleSettings.startColor = new Color(0, 0, 0);
+                            particle.Play();
+                        }
                     }
-                }
-            }         
+                }         
+            }
         }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -68,6 +72,7 @@ public class ButtonObject : MonoBehaviour
         if (other.tag == "End") {
             endStats.SetActive(true);
             hud.SetActive(false);
+            end = true;
         }
     }
 
