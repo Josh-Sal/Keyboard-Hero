@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: f60389a89fa8eed43bf00ff3a01cf4b4
   - enabled: 1
-    path: Assets/Scenes/Game Time EZ.unity
-    guid: 46ad9378e32ded5439e180ef9b1058d0
+    path: Assets/Scenes/EZ Game Time 1.unity
+    guid: 2a4f681b323f8d0408d30e8101c94b86
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
