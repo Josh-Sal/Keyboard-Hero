@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume() {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        music.Play();
+        music.UnPause();
     }
 
     public void Leave(int sceneID) {
